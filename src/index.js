@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import {robots} from './robots.js';
 import 'tachyons';
 
-ReactDOM.render(<CardList />
+ReactDOM.render(<CardList robots={robots} />
     
     , document.getElementById('root'));
 
