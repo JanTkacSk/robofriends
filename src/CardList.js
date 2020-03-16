@@ -4,15 +4,19 @@ import Card from './Card.js';
 
 const cardList = ({robots}) => {
 
-    const allCards = robots.map((user,i)=> {
-        
-        return <Card id={robots[i].id} name={robots[i].name} email={robots[i].email} />
-        
-    });
+
 
     return(
         <div>
-            {allCards}
+            {
+                robots.map((user,i)=> {
+                    return (
+                        <Card key={i} 
+                        id={robots[i].id} 
+                        name={robots[i].name} 
+                        email={robots[i].email} />)
+                    })
+            }
         </div>
     );
 }
