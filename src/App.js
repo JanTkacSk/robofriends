@@ -1,23 +1,33 @@
-import React from 'react';
+import React, {Component} from 'react';
 import CardList from './CardList';
 import {robots} from './robots.js';
-import Searchbox from './SearchBox.js';
+import SearchBox from './SearchBox.js';
 
-const state = {
-    robots: robots,
-    seatchfield: ''
-}
+class App extends Component {
+    constructor() {
+        super()
+        this.state = {
 
-const App = () => {
-    return(
-        <div className='tc'>
+            robots: robots,
+            seatchfield: ''
+        }
+    }
 
-            <h1>RoboFriends</h1>
-            <Searchbox />
-            <CardList robots={robots} />
-            
-        </div>
-    )
+    onSearchChange(event){
+        console.log(event.target.value);
+    }
+    render(){
+        return(
+            <div className='tc'>
+    
+                <h1>RoboFriends</h1>
+                <SearchBox searchChange={this.onSearchChange} />
+                <CardList robots={this.state.robots} />
+     
+    
+            </div>
+        );
+    }
 }
 
 export default App;
