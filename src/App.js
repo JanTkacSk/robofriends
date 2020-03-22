@@ -3,6 +3,11 @@ import CardList from './CardList';
 import {robots} from './robots.js';
 import Searchbox from './SearchBox.js';
 
+const state = {
+    robots: robots,
+    seatchfield: ''
+}
+
 const App = () => {
     return(
         <div className='tc'>
