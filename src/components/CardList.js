@@ -4,7 +4,7 @@ import Card from './Card.js';
 
 const cardList = ({robots}) => {
 
-
+    //throw new Error("Noo!");
 
     return(
         <div>
